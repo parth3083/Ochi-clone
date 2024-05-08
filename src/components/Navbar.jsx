@@ -14,7 +14,7 @@ function Navbar() {
           </div>
           <div className="links">
               {["Services", "Our Work", "About us", "Insights", "Contact us "].map((items, index) => {
-                  return <a href="#" key={index} className={`text-lg ml-5 font-regular capitalize font-raleway ${index==4 ? "ml-24":""}`} >{items}</a>
+                  return <a href="#" key={index} className={`text-lg ml-5 font-regular capitalize font-raleway ${index==4 ? "ml-20":""}`} >{items}</a>
               })}
           </div>
     </div>
