@@ -2,7 +2,12 @@ import React from "react";
 import image1 from "../assets/about_page.jpg";
 function About() {
   return (
-    <div className="w-full bg-[#CDEA68] p-20 rounded-tl-3xl rounded-tr-3xl ">
+    <div
+      data-scroll
+      data-scroll-speed="-0.1"
+      data-scroll-section
+      className="w-full bg-[#CDEA68] p-20 rounded-tl-3xl rounded-tr-3xl "
+    >
       <h1 className="text-[4vw] font-raleway tracking-tighter leading-[4.25vw] font-medium ">
         Ochi is a strategic partner for fast-grow­ing tech businesses that need
         to raise funds, sell prod­ucts, ex­plain com­plex ideas, and hire great

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
-function Eyes() {
+
+function Ready() {
   const [roate, setroate] = useState(0);
   useEffect(() => {
     window.addEventListener("mousemove", (e) => {
@@ -21,9 +22,16 @@ function Eyes() {
     });
   }, []);
   return (
-    <div className='w-full overflow-hidden h-screen relative bg-center bg-cover bg-[url("https://ochi.design/wp-content/uploads/2022/05/Top-Viewbbcbv-1-1440x921.jpg")]'>
-      <div className="  top-1/2 left-1/2 -translate-x-[50%] flex items-center gap-10 -translate-y-[50%] absolute">
-        <div className="w-[15vw] h-[15vw] flex items-center justify-center bg-white rounded-full">
+    <div className="w-full h-screen rounded-3xl bg-[#CDEA68] relative">
+      <div className="flex items-center flex-col justify-center pt-20">
+        {["ready", "to start", "the project ?"].map((items, index) => (
+          <h1 className=" font-oswald text-[12vw] font-black tracking-tighter uppercase leading-[12vw]">
+            {items}
+          </h1>
+        ))}
+      </div>
+      <div className=" -mt-16 top-1/2 left-1/2 -translate-x-[50%] flex items-center gap-10 -translate-y-[50%] absolute">
+        <div className="w-[10vw] h-[10vw] flex items-center justify-center bg-white rounded-full">
           <div className="relative w-2/3 h-2/3 black bg-black rounded-full ">
             <div
               style={{ transform: `translate(-50%,-50%) rotate(${roate}deg)` }}
@@ -33,7 +41,7 @@ function Eyes() {
             </div>
           </div>
         </div>
-        <div className="w-[15vw] h-[15vw] flex items-center justify-center bg-white rounded-full">
+        <div className="w-[10vw] h-[10vw] flex items-center justify-center bg-white rounded-full">
           <div className="relative w-2/3 h-2/3 black bg-black rounded-full ">
             <div
               style={{ transform: `translate(-50%,-50%) rotate(${roate}deg)` }}
@@ -48,4 +56,4 @@ function Eyes() {
   );
 }
 
-export default Eyes;
+export default Ready;
